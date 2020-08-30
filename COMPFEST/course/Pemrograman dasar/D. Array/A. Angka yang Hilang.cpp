@@ -10,10 +10,25 @@ void solve(int N, int Q){
 	for (bil=1; bil<=N; bil++) {
         if(ar[bil]!=1){
             cout << bil;
+            if(N%2 == 0){
+                if(bil < N){
+                    cout << " ";
+                }else
+                {
+                    cout << endl;
+                }
+                
+            }
+            else{
+                if(bil < N-1){
+                    cout << " ";
+                }else{
+                    cout << endl;
+                }
+            }
         }
-        if()
 	}
-    cout << endl;
+
 }
 int main () {
 	int N, Q;
