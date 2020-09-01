@@ -1,0 +1,16 @@
+#penting, terminal ada di luar folder yang kan di upload
+#ex : upload COMFEST, terminal berada di Cpp
+
+1. git init
+
+2.A. git add . //untuk semua folder didalamnya
+2.B git add COMFEST //untuk folder yang disebutkan
+
+3. git commit -m "xxx" // "xxx" adalah catatan, opsional
+
+4. git remote add origin master https://github.com/repository mu
+
+5. git pull origin master
+
+6. git push -f origin master // -f jika repo sebelumnya kosong
+

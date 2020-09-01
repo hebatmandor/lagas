@@ -8,25 +8,33 @@ void solve(int N, int Q){
 	}
 
 	for (bil=1; bil<=N; bil++) {
-        if(ar[bil]!=1){
-            cout << bil;
-            if(N%2 == 0){
-                if(bil < N){
-                    cout << " ";
-                }else
-                {
-                    cout << endl;
+        if(bil < N){
+            if(ar[bil]!=1){
+                cout << bil;
+                if(N%2 == 0){
+                    if(bil < N){
+                        cout << " | ";
+                    }else
+                    {
+                        cout << endl;
+                    }
+
                 }
-                
+                else{
+                    if(bil < N-1){
+                        cout << " | ";
+                    }else{
+                        cout << endl;
+                    }
+                }
             }
-            else{
-                if(bil < N-1){
-                    cout << " ";
-                }else{
-                    cout << endl;
-                }
+        }else
+        {
+            if(ar[bil!=1]){
+                cout << bil << endl;
             }
         }
+        
 	}
 
 }

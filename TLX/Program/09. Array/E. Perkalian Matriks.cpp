@@ -1,40 +1,49 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-#define ll long long
-
-void solve(int N, int M, int P){
-    int arA[100][100], arB[100][100], arC[100][100];
-    for (int i = 0; i < N; i++)
+void perkalian(int M, int N, int O){
+    int arA[101][101], arB[101][101], arC[101][101];
+    for (int i = 0; i < M; i++)
     {
-        for (int j = 0; j < M; j++)
+        for (int j = 0; j < N; j++)
         {
             cin >> arA[i][j];
         }
     }
-    for (int i = 0; i < M; i++)
-    {
-        for (int j = 0; i < P; i++)
-        {
-            cout << arB[i][j];
-        }
-        
-    }
-
     for (int i = 0; i < N; i++)
     {
-        for (int j = 0; i < P; i++)
+        for (int j = 0; j < O; j++)
         {
-            /* code */
+            cin >> arB[i][j];
         }
-        
+    }
+    for (int i = 0; i < M; i++)
+    {
+        for (int j = 0; j < O; j++)
+        {
+            arC[i][j]=0;
+            for (int k = 0; k < N; k++)
+            {
+                arC[i][j] = arC[i][j] + arA[i][k] * arB[k][j];
+            }   
+        }
+    }
+    
+    for (int i = 0; i < M; i++)
+    {
+        for (int j = 0; j < O; j++)
+        {
+            cout << arC[i][j];
+            if(j < O -1){
+                cout << " ";
+            }
+        }
+        cout << endl;
     }
     
     
 }
-
 int main(){
-    int N, M, P;
-    cin >> N >> M >> P;
-    solve(N, M, P);
+    int M, N, O;
+    cin >> M >> N >> O;
+    perkalian(M, N, O);
 }
