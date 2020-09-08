@@ -1,5 +1,3 @@
-/* C/C++ program to solve Rat in 
-a Maze problem using backtracking */
 #include <stdio.h> 
 
 // Maze size 
@@ -33,15 +31,6 @@ bool isSafe(int maze[N][N], int x, int y)
 	return false; 
 } 
 
-/* This function solves the Maze problem 
-using Backtracking. It mainly uses 
-solveMazeUtil() to solve the problem. 
-It returns false if no path is possible, 
-otherwise return true and prints the path 
-in the form of 1s. Please note that there 
-may be more than one solutions, this 
-function prints one of the feasible 
-solutions.*/
 bool solveMaze(int maze[N][N]) 
 { 
 	int sol[N][N] = { { 0, 0, 0, 0 }, 
