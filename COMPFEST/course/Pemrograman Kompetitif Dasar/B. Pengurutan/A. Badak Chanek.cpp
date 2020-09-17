@@ -1,20 +1,24 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 void solve(int N, int Q){
-    int arr[1000], x;
+    int ara[1000], x, arb[1000];
     for (int i = 1; i <= N; i++)
     {
-        cin >> arr[i];
+        cin >> ara[i];
     }
-    for (int i = 1; i <= Q; i++)
-    {
+    for (int i = 1; i <= N; i++){
+        for (int j = i+1; j <= N; j++){
+            if (ara[i] > arb[j]){
+                int temp = ara[i];
+                ara[i] = ara[j];
+                ara[j] = temp;
+            }
+        }
+    }
+    for (int i = 1; i <= Q; i++){
         cin >> x;
-        if(x<=N){
-            cout << arr[x] << endl;
-        }else
-        {
-            continue;
-        }   
+        cout << ara[x] << endl;
     }
 }
 int main(){
