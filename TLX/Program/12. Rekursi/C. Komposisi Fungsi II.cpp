@@ -1,9 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
+//#define int hasil
 
-int f(int a, int b, int x){
-    //cout << endl << abs(((a*x)+b)) << " f" << endl;
-    return abs(((a*x)+b));
+int fungsi(int a, int b, int x){
+    int hasil;
+    hasil = (a * x) + b;
+    return hasil;
 }
 
 void solve(int a, int b, int k, int x){
@@ -12,12 +14,13 @@ void solve(int a, int b, int k, int x){
         //cout << f(a,b,x) << endl;
         cout << x << endl;
     }else{
-        for(int i = k; i > 0; i--){
-            hasil = abs(a * f(a, b, x) + b);
-        //cout << hasil << " | " << i << " hasil sebelum final" << endl;
+        while(k > 1){
+            int i = 1;
+            hasil = (a * fungsi(a, b, x)) + b;
+            k--;
         }
-        cout << hasil << endl;
     }
+    cout << hasil << endl;
 }
 int main(){
     int A, B, K, X;
